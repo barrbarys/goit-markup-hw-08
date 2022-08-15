@@ -1,0 +1,31 @@
+:root {
+  /* Змінні для флексу */
+  --card-item: 4;
+  --gap: 30px;
+}
+/* Кольори */
+$primary-black: #212121;
+$primary-white: #ffffff;
+$dark-background: #2f303a;
+$transparent-white: rgba(255, 255, 255, 0.6);
+$accent: #2196f3;
+$logo-bl: #000000;
+$page-grey: #757575;
+$btn-hover: #188ce8;
+$light-grey-bgc: #f5f4fa;
+$icon-link: #afb1b8;
+$social__link-bgc: rgba(255, 255, 255, 0.1);
+$icon-black: #000000;
+$overlay-bgc: rgba(33, 150, 243, 0.9);
+$placeholder-txt-clr: rgba(117, 117, 117, 0.5);
+$footer-placeholder-clr: rgba(255, 255, 255, 0.6);
+/* кольори рамок */
+$header-border-clr: #ececec;
+$portfolio-card-border-clr: #eeeeee;
+
+/* Шрифти */
+$main-font-family: 'Roboto', sans-serif;
+$logo-font-family: 'Raleway', sans-serif;
+
+/* трансформація */
+$transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);

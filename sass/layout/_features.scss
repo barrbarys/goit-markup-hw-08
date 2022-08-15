@@ -1,0 +1,29 @@
+.features {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $primary-black;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding: 25px 100px;
+    background: $light-grey-bgc;
+    border-radius: 4px;
+  }
+
+  &__text {
+    margin-top: 0;
+  }
+
+  &__text:last-child {
+    margin-bottom: 0;
+  }
+}

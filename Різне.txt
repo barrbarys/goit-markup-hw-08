@@ -1,0 +1,10 @@
+Css лічильник
+
+
+для батьківського елемента  пишем в стилях тип контенту який рахується через counter-reset:title(приклад)
+
+а для елементу котрий рахуєтся пишемо   counter-increment: title;
+
+
+.work-item-title::before {
+  content: "0" counter(title) ".";

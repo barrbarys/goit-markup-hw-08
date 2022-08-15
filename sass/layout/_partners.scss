@@ -1,0 +1,28 @@
+.partners__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid $icon-link;
+  border-radius: 4px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  transition: color $transition, border $transition;
+  color: $icon-link;
+  background-color: $primary-white;
+}
+
+.partners__icon {
+  fill: currentColor;
+}
+
+.partners__item {
+  --card-item: 6;
+}
+
+.partners__link:hover,
+.partners__link:focus {
+  color: $accent;
+  border: 1px solid $accent;
+}

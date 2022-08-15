@@ -1,0 +1,39 @@
+.user-agreement__group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.user-agreement__label {
+  user-select: none;
+  cursor: pointer;
+  display: block;
+}
+
+.user-agreement__input:focus-within ~ .user-agreement__icon .user-agreement__icon--uncheck,
+.user-agreement__input:hover ~ .user-agreement__icon .user-agreement__icon--uncheck {
+  fill: $accent;
+}
+
+.user-agreement__group:focus-within
+  .user-agreement__icon:checked
+  + .user-agreement__icon
+  .user-agreement__icon--uncheck {
+  opacity: 0;
+}
+
+.user-agreement__icon--check {
+  opacity: 0;
+  transition: $transition;
+}
+
+.user-agreement__input:checked + .user-agreement__icon .user-agreement__icon--check {
+  opacity: 1;
+}
+
+.user-agreement__link {
+  text-decoration: underline;
+  margin-left: 5px;
+  color: $accent;
+}

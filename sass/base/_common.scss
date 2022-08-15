@@ -1,0 +1,25 @@
+body {
+  background-color: $primary-white;
+  font-family: $main-font-family;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $page-grey;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+::selection {
+  background-color: $accent;
+  color: $primary-white;
+}
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

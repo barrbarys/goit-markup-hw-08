@@ -1,0 +1,41 @@
+.footer {
+  background-color: $dark-background;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__tittle {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $primary-white;
+  }
+  &__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .logo {
+    margin-bottom: 20px;
+    &-text {
+      color: $primary-white;
+    }
+  }
+  .social__link {
+    background-color: $social__link-bgc;
+    transition: background-color $transition;
+  }
+
+  .social__icon {
+    color: $primary-white;
+  }
+
+  .social__link:hover,
+  .social__link:focus {
+    background-color: $accent;
+  }
+}

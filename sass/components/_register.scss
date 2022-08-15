@@ -1,0 +1,87 @@
+.register__title {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  color: $primary-black;
+  margin-bottom: 15px;
+}
+
+/* ---------- */
+/* modal form */
+.register__group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 17px;
+}
+
+.register__item {
+  display: block;
+  width: 100%;
+  gap: 10px;
+  position: relative;
+  justify-content: center;
+}
+
+.register__label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.register__label:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.register__user-icon {
+  fill: $primary-black;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+}
+
+.register__input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  width: 448px;
+  height: 40px;
+  padding: 12px 42px;
+  transition: border-color $transition;
+}
+
+.register__user-icon {
+  display: block;
+  transition: fill $transition;
+}
+.register__item:focus-within .register__user-icon,
+.register__item:hover .register__user-icon {
+  fill: $accent;
+}
+
+.register__item:focus-within .register__input,
+.register__item:hover .register__input {
+  border-color: $accent;
+}
+.textarea {
+  display: block;
+}
+.register__input.textarea {
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+}
+
+.textarea::placeholder {
+  color: $placeholder-txt-clr;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 0;
+}
+.user-agreement__group {
+  margin-bottom: 30px;
+}

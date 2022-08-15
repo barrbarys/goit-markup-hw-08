@@ -1,0 +1,23 @@
+.address {
+  font-style: inherit;
+  color: $transparent-white;
+  &__item {
+    display: block;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__link[target='_blank'] {
+    color: $primary-white;
+  }
+
+  &__link {
+    transition: color $transition;
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+  }
+}
