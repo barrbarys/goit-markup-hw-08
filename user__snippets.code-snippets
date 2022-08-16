@@ -34,11 +34,19 @@
 		"description": "A snippet that create Comment Big Block."
 	},
 	"SVG": {
-		"prefix": "svg",
+		"prefix": "svm",
 		"body": [
 			"<svg class=\"$1__icon\" width=\"$2\" height=\"$3\">",
 			"  <use href=\".$4\"></use>",
 			"</svg>"
 		]
+	},
+	"mediaquery": {
+		"prefix": "mq",
+		"body": [
+			"@include mq(\"$1\"){\n \"$2\"}"
+
+		],
+		"description": "A snippet that create Comment Big Block."
 	}
 }

@@ -1,4 +1,10 @@
 .features {
+  @include mq(tab) {
+    --card-item: 2;
+  }
+  @include mq(desk) {
+    --card-item: 4;
+  }
   &__title {
     margin-top: 0;
     margin-bottom: 10px;

@@ -6,18 +6,34 @@
   letter-spacing: 0.02em;
   margin-left: auto;
   margin-right: auto;
-  .nav,
-  .contacts {
-    @include mq(mob-only) {
+  @include mq(mob-only) {
+    .nav,
+    .contacts {
       display: none;
     }
   }
+  @include mq(tab) {
+    .contacts__link {
+      font-size: 12px;
+      line-height: 1.17;
+    }
+  }
+  @include mq(desk) {
+    .contacts__link {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
   .logo {
-    margin-right: 331px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     &-text {
       color: $logo-bl;
+    }
+    @include mq(tab) {
+      margin-right: 87px;
+      padding-top: 26px;
+      padding-bottom: 26px;
     }
   }
 
@@ -25,7 +41,14 @@
     display: flex;
     align-items: center;
   }
-}
-.contacts {
-  margin-left: auto;
+  .contacts {
+    margin-left: auto;
+    @include mq(tab) {
+      flex-direction: column;
+    }
+    @include mq(desk) {
+      gap: 50px;
+      flex-direction: row;
+    }
+  }
 }

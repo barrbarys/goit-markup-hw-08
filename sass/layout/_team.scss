@@ -4,6 +4,13 @@
   min-height: 600px;
   margin-left: auto;
   margin-right: auto;
+
+  @include mq(tab) {
+    --card-item: 2;
+  }
+  @include mq(desk) {
+    --card-item: 4;
+  }
 }
 
 .team__item {

@@ -1,11 +1,12 @@
 .work {
   padding-top: 0;
+  @include mq(noDesk) {
+    display: none;
+  }
 }
 
 .work__list {
-  @include mq(tab) {
-    --card-item: 2;
-  }
+  --card-item: 3;
 }
 
 .work__item {

@@ -5,7 +5,7 @@
 }
 
 .email-subscribe-input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -18,6 +18,9 @@
   font-size: 16px;
   line-height: 1.25;
   transition: border-color $transition;
+  @include mq(desk) {
+    width: 358px;
+  }
 }
 
 /* .email-subscribe-btn {
