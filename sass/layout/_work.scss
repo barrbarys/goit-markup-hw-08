@@ -3,7 +3,9 @@
 }
 
 .work__list {
-  --card-item: 3;
+  @include mq(tab) {
+    --card-item: 2;
+  }
 }
 
 .work__item {
