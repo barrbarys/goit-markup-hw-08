@@ -1,6 +1,8 @@
 .filter {
   &__btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     padding: 6px 22px;
     background-color: $light-grey-bgc;
@@ -16,8 +18,12 @@
 
   &__list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 50px;
+    @include mq(tab) {
+      justify-content: center;
+    }
   }
 
   &__item {

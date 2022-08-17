@@ -18,9 +18,7 @@
 }
 
 .partners__item {
-  @include mq(mob) {
-    --card-item: 2;
-  }
+  --card-item: 2;
   @include mq(tab) {
     --card-item: 3;
   }

@@ -229,7 +229,15 @@ body {
 }
 
 .filter__btn {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: none;
   padding: 6px 22px;
   background-color: #f5f4fa;
@@ -249,10 +257,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .filter__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .filter__item {
   margin-right: 0;
@@ -736,20 +751,38 @@ body {
 }
 
 .menu-overlay {
-  display: none;
   z-index: 100;
+  top: 0;
+  left: 0;
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: transparent;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
+@media screen and (min-width: 768px) {
+  .menu-overlay {
+    display: none;
+  }
+}
+.menu-overlay.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+}
+@media screen and (min-width: 768px) {
+  .menu-overlay.is-open {
+    display: none;
+  }
+}
 
 .menu-container {
-  display: none;
   position: relative;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -766,6 +799,21 @@ body {
   padding: 48px 40px;
   font-weight: 500;
   letter-spacing: 0.02em;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+}
+.menu-overlay.is-open .menu-container {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @media (max-width: 767.98px) {
@@ -824,9 +872,6 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 10px;
-}
-.mobile-social__list__icon {
-  display: none;
 }
 
 .mobile-social__link {
@@ -1062,8 +1107,8 @@ body {
 .hero {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-img/overlay.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-img/overlay.jpg");
-  max-width: 100%;
-  min-height: 400px;
+  width: 100%;
+  max-height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
@@ -1074,8 +1119,19 @@ body {
   text-align: center;
   background-color: #2f303a;
 }
+@media screen and (min-width: 480px) {
+  .hero {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 1200px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero {
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     max-height: 600px;
@@ -1126,10 +1182,8 @@ body {
   fill: currentColor;
 }
 
-@media screen and (min-width: 480px) {
-  .partners__item {
-    --card-item: 2;
-  }
+.partners__item {
+  --card-item: 2;
 }
 @media screen and (min-width: 768px) {
   .partners__item {
@@ -1179,8 +1233,15 @@ body {
   margin-top: 0;
   margin-bottom: 0;
 }
-.portfolio__item {
-  --card-item: 3;
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    --card-item: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    --card-item: 3;
+  }
 }
 .portfolio__link:hover, .portfolio__link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);

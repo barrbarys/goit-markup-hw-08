@@ -28,7 +28,12 @@
   }
 
   &__item {
-    --card-item: 3;
+    @include mq(tab) {
+      --card-item: 2;
+    }
+    @include mq(desk) {
+      --card-item: 3;
+    }
   }
 
   &__link:hover,

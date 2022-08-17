@@ -1,0 +1,20 @@
+.contacts {
+  display: flex;
+  gap: 50px;
+  &__link {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color$transition;
+    gap: 10px;
+  }
+
+  &__link-icon {
+    fill: currentColor;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $accent;
+  }
+}
