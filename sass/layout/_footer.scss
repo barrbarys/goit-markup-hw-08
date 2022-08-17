@@ -24,6 +24,9 @@
     }
   }
   @include mq(tab) {
+    .email-subscribe {
+      flex-direction: column;
+    }
   }
   &__element {
     margin-left: auto;
