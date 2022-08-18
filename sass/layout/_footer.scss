@@ -6,23 +6,20 @@
   padding-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
-  @include mq(mob) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    .email-subscribe {
-      flex-wrap: wrap;
-    }
-    .logo,
-    .address,
-    .address__item {
-      display: flex;
-      justify-content: center;
-    }
-    .footer__tittle,
-    .subscribe-title {
-      text-align: center;
-    }
+  .email-subscribe {
+    flex-wrap: wrap;
   }
+  .logo,
+  .address,
+  .address__item {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__tittle,
+  .subscribe-title {
+    text-align: center;
+  }
+
   @include mq(tab) {
     .email-subscribe {
       flex-direction: column;
