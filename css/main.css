@@ -764,7 +764,6 @@ body {
   width: 40px;
   height: 40px;
   border: none;
-  position: absolute;
   top: 10px;
   right: 10px;
 }
@@ -933,6 +932,11 @@ body {
   text-transform: uppercase;
   color: #212121;
 }
+@media (max-width: 767.98px) {
+  .features__title {
+    text-align: center;
+  }
+}
 .features__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1056,7 +1060,9 @@ body {
   letter-spacing: 0.02em;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+}
+.header .menu-btn {
+  margin-left: auto;
 }
 @media (max-width: 767.98px) {
   .header .nav,
@@ -1123,7 +1129,6 @@ body {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/index-img/hero-img/hero_mob_480.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index-img/hero-img/hero_mob_480.jpg");
   width: 100%;
-  max-height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
@@ -1164,23 +1169,10 @@ body {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index-img/hero-img/hero_desk_3200.jpg");
   }
 }
-@media screen and (min-width: 480px) {
-  .hero {
-    max-width: 768px;
-    background-size: cover;
-  }
-}
-@media screen and (min-width: 768px) {
-  .hero {
-    max-width: 1200px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .hero {
-    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    max-height: 600px;
   }
 }
 .hero__title {

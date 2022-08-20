@@ -6,6 +6,9 @@
   letter-spacing: 0.02em;
   margin-left: auto;
   margin-right: auto;
+  .menu-btn {
+    margin-left: auto;
+  }
   @include mq(mob-only) {
     .nav,
     .contacts {
@@ -51,5 +54,4 @@
       flex-direction: row;
     }
   }
-  position: relative;
 }

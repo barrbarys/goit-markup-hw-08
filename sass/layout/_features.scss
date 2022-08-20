@@ -6,6 +6,9 @@
     --card-item: 4;
   }
   &__title {
+    @include mq(mob-only) {
+      text-align: center;
+    }
     margin-top: 0;
     margin-bottom: 10px;
     font-weight: 700;
