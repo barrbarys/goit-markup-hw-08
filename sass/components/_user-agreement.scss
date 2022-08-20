@@ -6,6 +6,10 @@
 }
 
 .user-agreement__label {
+  @include mq(noDesk) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
   user-select: none;
   cursor: pointer;
   display: block;
@@ -22,7 +26,9 @@
   .user-agreement__icon--uncheck {
   opacity: 0;
 }
-
+.user-agreement__icon {
+  flex-shrink: 0;
+}
 .user-agreement__icon--check {
   opacity: 0;
   transition: $transition;

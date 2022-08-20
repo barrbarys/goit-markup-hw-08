@@ -53,6 +53,7 @@
   }
 }
 .menu-container {
+  overflow: auto;
   @include mq(tab) {
     display: none;
   }
@@ -64,6 +65,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 64px;
+
   padding: 48px 40px;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -72,6 +75,14 @@
 
   .menu-overlay.is-open & {
     transform: translateX(0);
+  }
+  .modal__btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -112,18 +123,7 @@
       line-height: 1.18;
       color: $accent;
     }
-
-    margin-bottom: 64px;
   }
-}
-
-.modal__btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  border: none;
-  width: 40px;
-  height: 40px;
 }
 
 .mobile-social__list {
