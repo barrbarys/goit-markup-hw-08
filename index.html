@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Головна сторінка сайту WebStudio" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -35,7 +36,12 @@
     <header class="header">
       <div class="container header__container">
         <a class="logo link" href="./index.html">Web<span class="logo-text">Studio</span></a>
-        <button class="mobile-menu__btn" type="button" data-menu-open>
+        <button
+          class="mobile-menu__btn"
+          type="button"
+          aria-label="кнопка мобільного меню"
+          data-menu-open
+        >
           <svg class="mobile-menu-btn__icon" width="40" height="40">
             <use href="./images/icons.svg#mobile-menu"></use>
           </svg>
@@ -157,11 +163,11 @@
               <img
                 class="work__img"
                 srcset="
-                  ./images/index-img/work/img-1_desk_370.jpg 370w,
-                  ./images/index-img/work/img-1_desk_740.jpg 740w
+                  ./images/index-img/work/img-1_desk_370.webp 370w,
+                  ./images/index-img/work/img-1_desk_740.webp 740w
                 "
                 sizes="(min-width:1200px) 370px"
-                src="./images/index-img/work/img-1_desk_370.jpg"
+                src="./images/index-img/work/img-1_desk_370.webp"
                 alt="Фото написания програмного кода "
                 width="370"
                 height="294"
@@ -174,11 +180,11 @@
               <img
                 class="work__img"
                 srcset="
-                  ./images/index-img/work/img-2_desk_370.jpg 370w,
-                  ./images/index-img/work/img-2_desk_740.jpg 740w
+                  ./images/index-img/work/img-2_desk_370.webp 370w,
+                  ./images/index-img/work/img-2_desk_740.webp 740w
                 "
                 sizes="(min-width:1200px) 370px"
-                src="./images/index-img/work/img-2_desk_370.jpg"
+                src="./images/index-img/work/img-2_desk_370.webp"
                 alt="Фото создания мобильного приложения"
                 width="370"
                 height="294"
@@ -191,11 +197,11 @@
               <img
                 class="work__img"
                 srcset="
-                  ./images/index-img/work/img-3_desk_370.jpg 370w,
-                  ./images/index-img/work/img-3_desk_740.jpg 740w
+                  ./images/index-img/work/img-3_desk_370.webp 370w,
+                  ./images/index-img/work/img-3_desk_740.webp 740w
                 "
                 sizes="(min-width:1200px) 370px"
-                src="./images/index-img/work/img-3_desk_370.jpg"
+                src="./images/index-img/work/img-3_desk_370.webp"
                 alt="Фото подбора дизайна проэкта"
                 width="370"
                 height="294"
@@ -216,22 +222,67 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="list team__list card-set">
             <li class="item team__item card-item">
-              <img
-                class="team__img"
-                srcset="
-                  ./images/index-img/team/img-1_desk_270.jpg 270w,
-                  ./images/index-img/team/img-1_desk_540.jpg 540w,
-                  ./images/index-img/team/img-1_tab_354.jpg  354w,
-                  ./images/index-img/team/img-1_tab_708.jpg  708w,
-                  ./images/index-img/team/img-1_mob_450.jpg  450w,
-                  ./images/index-img/team/img-1_mob_900.jpg  900w
-                "
-                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, 100vw"
-                src="./images/index-img/team/img-1_desk_270.jpg"
-                alt="Фото Игоря Демяненка"
-                width="450"
-                height="260"
-              />
+              <picture>
+                <!-- descktop -->
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/index-img/team/img-1_desk_@1x.webp 1x,
+                    ./images/index-img/team/img-1_desk_@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/index-img/team/img-1_desk_@1x.jpg 1x,
+                    ./images/index-img/team/img-1_desk_@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <!-- tablet -->
+                <source
+                  media="(min-width:768px )"
+                  srcset="
+                    ./images/index-img/team/img-1_tab_@1x.webp 1x,
+                    ./images/index-img/team/img-1_tab_@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width:768px )"
+                  srcset="
+                    ./images/index-img/team/img-1_tab_@1x.jpg 1x,
+                    ./images/index-img/team/img-1_tab_@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <!-- mobile -->
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./images/index-img/team/img-1_mob_@1x.webp 1x,
+                    ./images/index-img/team/img-1_mob_@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./images/index-img/team/img-1_mob_@1x.jpg 1x,
+                    ./images/index-img/team/img-1_mob_@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/index-img/team/img-1_desk_@1x.jpg"
+                  alt="Фото Игоря Демяненка"
+                  width="450"
+                  height="260"
+                />
+              </picture>
+
               <div class="team__desc">
                 <h3 class="team__title">Ігор Дем'яненко</h3>
                 <p lang="en" class="team__text">Product Designer</p>
@@ -292,22 +343,67 @@
               </div>
             </li>
             <li class="item team__item card-item">
-              <img
-                class="team__img"
-                srcset="
-                  ./images/index-img/team/img-2_desk_270.jpg 270w,
-                  ./images/index-img/team/img-2_desk_540.jpg 540w,
-                  ./images/index-img/team/img-2_tab_354.jpg  354w,
-                  ./images/index-img/team/img-2_tab_708.jpg  708w,
-                  ./images/index-img/team/img-2_mob_450.jpg  450w,
-                  ./images/index-img/team/img-2_mob_900.jpg  900w
-                "
-                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, 100vw"
-                src="./images/index-img/team/img-2_desk_270.jpg"
-                alt="Фото Ольги Репиной"
-                width="450"
-                height="260"
-              />
+              <picture>
+                <!-- descktop -->
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/index-img/team/img-2_desk_@1x.webp 1x,
+                    ./images/index-img/team/img-2_desk_@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/index-img/team/img-2_desk_@1x.jpg 1x,
+                    ./images/index-img/team/img-2_desk_@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <!-- tablet -->
+                <source
+                  media="(min-width:768px )"
+                  srcset="
+                    ./images/index-img/team/img-2_tab_@1x.webp 1x,
+                    ./images/index-img/team/img-2_tab_@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width:768px )"
+                  srcset="
+                    ./images/index-img/team/img-2_tab_@1x.jpg 1x,
+                    ./images/index-img/team/img-2_tab_@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <!-- mobile -->
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./images/index-img/team/img-2_mob_@1x.webp 1x,
+                    ./images/index-img/team/img-2_mob_@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./images/index-img/team/img-2_mob_@1x.jpg 1x,
+                    ./images/index-img/team/img-2_mob_@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/index-img/team/img-2_desk_@1x.jpg"
+                  alt="Фото Ольги Репиной"
+                  width="450"
+                  height="260"
+                />
+              </picture>
+
               <div class="team__desc">
                 <h3 class="team__title">Ольга Репіна</h3>
                 <p lang="en" class="team__text">Frontend Developer</p>
@@ -368,22 +464,67 @@
               </div>
             </li>
             <li class="item team__item card-item">
-              <img
-                class="team__img"
-                srcset="
-                  ./images/index-img/team/img-3_desk_270.jpg 270w,
-                  ./images/index-img/team/img-3_desk_540.jpg 540w,
-                  ./images/index-img/team/img-3_tab_354.jpg  354w,
-                  ./images/index-img/team/img-3_tab_708.jpg  708w,
-                  ./images/index-img/team/img-3_mob_450.jpg  450w,
-                  ./images/index-img/team/img-3_mob_900.jpg  900w
-                "
-                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, 100vw"
-                src="./images/index-img/team/img-3_desk_270.jpg"
-                alt="Фото Николая Тарасова"
-                width="450"
-                height="260"
-              />
+              <picture>
+                <!-- descktop -->
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/index-img/team/img-3_desk_@1x.webp 1x,
+                    ./images/index-img/team/img-3_desk_@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/index-img/team/img-3_desk_@1x.jpg 1x,
+                    ./images/index-img/team/img-3_desk_@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <!-- tablet -->
+                <source
+                  media="(min-width:768px )"
+                  srcset="
+                    ./images/index-img/team/img-3_tab_@1x.webp 1x,
+                    ./images/index-img/team/img-3_tab_@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width:768px )"
+                  srcset="
+                    ./images/index-img/team/img-3_tab_@1x.jpg 1x,
+                    ./images/index-img/team/img-3_tab_@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <!-- mobile -->
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./images/index-img/team/img-3_mob_@1x.webp 1x,
+                    ./images/index-img/team/img-3_mob_@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./images/index-img/team/img-3_mob_@1x.jpg 1x,
+                    ./images/index-img/team/img-3_mob_@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/index-img/team/img-3_desk_@1x.jpg"
+                  alt="Фото Николая Тарасова"
+                  width="450"
+                  height="260"
+                />
+              </picture>
+
               <div class="team__desc">
                 <h3 class="team__title">Микола Тарасов</h3>
                 <p lang="en" class="team__text">Marketing</p>
@@ -444,22 +585,67 @@
               </div>
             </li>
             <li class="item team__item card-item">
-              <img
-                class="team__img"
-                srcset="
-                  ./images/index-img/team/img-4_desk_270.jpg 270w,
-                  ./images/index-img/team/img-4_desk_540.jpg 540w,
-                  ./images/index-img/team/img-4_tab_354.jpg  354w,
-                  ./images/index-img/team/img-4_tab_708.jpg  708w,
-                  ./images/index-img/team/img-4_mob_450.jpg  450w,
-                  ./images/index-img/team/img-4_mob_900.jpg  900w
-                "
-                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, 100vw"
-                src="./images/index-img/team/img-4_desk_270.jpg"
-                alt="Фото Михаила Ермакова"
-                width="450"
-                height="260"
-              />
+              <picture>
+                <!-- descktop -->
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/index-img/team/img-4_desk_@1x.webp 1x,
+                    ./images/index-img/team/img-4_desk_@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/index-img/team/img-4_desk_@1x.jpg 1x,
+                    ./images/index-img/team/img-4_desk_@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <!-- tablet -->
+                <source
+                  media="(min-width:768px )"
+                  srcset="
+                    ./images/index-img/team/img-4_tab_@1x.webp 1x,
+                    ./images/index-img/team/img-4_tab_@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width:768px )"
+                  srcset="
+                    ./images/index-img/team/img-4_tab_@1x.jpg 1x,
+                    ./images/index-img/team/img-4_tab_@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <!-- mobile -->
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./images/index-img/team/img-4_mob_@1x.webp 1x,
+                    ./images/index-img/team/img-4_mob_@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./images/index-img/team/img-4_mob_@1x.jpg 1x,
+                    ./images/index-img/team/img-4_mob_@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/index-img/team/img-4_desk_@1x.jpg"
+                  alt="Фото Михаила Ермакова"
+                  width="450"
+                  height="260"
+                />
+              </picture>
+
               <div class="team__desc">
                 <h3 class="team__title">Михайло Єрмаков</h3>
                 <p lang="en" class="team__text">UI Designer</p>

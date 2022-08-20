@@ -74,6 +74,43 @@
 
   .menu-overlay.is-open & {
     transform: translateX(0);
+    .nav {
+      justify-content: start;
+
+      &__list {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      &__link {
+        padding: 0;
+        font-size: 40px;
+        line-height: 47px;
+      }
+
+      margin-bottom: auto;
+    }
+
+    .contacts {
+      flex-direction: column-reverse;
+      gap: 32px;
+
+      &__link {
+        font-size: 24px;
+        line-height: 1.17;
+      }
+
+      &__link-icon {
+        display: none;
+      }
+
+      .phone {
+        font-size: 34px;
+
+        line-height: 1.18;
+        color: $accent;
+      }
+    }
   }
   .modal__btn {
     position: absolute;
@@ -86,43 +123,6 @@
 }
 
 @include mq(mob-only) {
-  .nav {
-    justify-content: start;
-
-    &__list {
-      flex-direction: column;
-      gap: 32px;
-    }
-
-    &__link {
-      padding: 0;
-      font-size: 40px;
-      line-height: 47px;
-    }
-
-    margin-bottom: auto;
-  }
-
-  .contacts {
-    flex-direction: column-reverse;
-    gap: 32px;
-
-    &__link {
-      font-size: 24px;
-      line-height: 1.17;
-    }
-
-    &__link-icon {
-      display: none;
-    }
-
-    .phone {
-      font-size: 34px;
-
-      line-height: 1.18;
-      color: $accent;
-    }
-  }
 }
 
 .mobile-social__list {

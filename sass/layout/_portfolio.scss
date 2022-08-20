@@ -1,7 +1,8 @@
 .portfolio {
   &__link {
-    display: block;
-
+    display: flex;
+    height: 100%;
+    flex-direction: column;
     transition: box-shadow $transition;
     &:hover .portfolio__overlay,
     &:focus .portfolio__overlay {
@@ -50,6 +51,7 @@
   }
 
   &__card-description {
+    flex-grow: 1;
     border: 1px solid $portfolio-card-border-clr;
     border-top: none;
     padding: 20px 24px;
@@ -60,7 +62,10 @@
   &__overlay {
     width: 100%;
     height: 100%;
-    padding: 63px 24px;
+    padding: 24px;
+    @include mq(mob) {
+      padding: 63px 24px;
+    }
     opacity: 0;
     display: flex;
     justify-content: center;
@@ -77,6 +82,8 @@
   &__overlay-text {
     color: $primary-white;
     font-size: 18px;
+    overflow: auto;
+    height: 100%;
     letter-spacing: 0.03em;
     line-height: 1.56;
     user-select: none;

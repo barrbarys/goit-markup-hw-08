@@ -19,10 +19,14 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 50px;
+    gap: 15px 8px;
+    margin-bottom: 40px;
     @include mq(tab) {
+      margin-bottom: 30px;
       justify-content: center;
+    }
+    @include mq(desk) {
+      margin-bottom: 50px;
     }
   }
 

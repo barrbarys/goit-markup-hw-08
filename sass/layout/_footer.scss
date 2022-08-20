@@ -4,31 +4,28 @@
   background-color: $dark-background;
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
   .email-subscribe {
     flex-wrap: wrap;
   }
-  .logo,
-  .address,
-  .address__item {
-    display: flex;
-    justify-content: center;
-  }
-  .footer__tittle,
-  .subscribe-title {
-    text-align: center;
-  }
-
-  @include mq(tab) {
-    .email-subscribe {
-      flex-direction: column;
+  @include mq(noDesk) {
+    .logo,
+    .address,
+    .address__item {
+      display: flex;
+      justify-content: center;
+    }
+    .footer__tittle,
+    .subscribe-title {
+      text-align: center;
     }
   }
-  &__element {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  // @include mq(tab) {
+  //   .email-subscribe {
+  //     // flex-direction: column;
+  //   }
+  // }
+
   &__tittle {
     display: block;
     margin-top: 0;
@@ -39,6 +36,11 @@
     color: $primary-white;
   }
   &__container {
+    @include mq(tab-only) {
+      justify-content: space-around;
+      align-items: baseline;
+    }
+
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -46,6 +48,11 @@
     @include mq(tab) {
       flex-direction: row;
       flex-wrap: wrap;
+    }
+  }
+  &__element:last-child {
+    @include mq(desk) {
+      margin-left: auto;
     }
   }
   .logo {
